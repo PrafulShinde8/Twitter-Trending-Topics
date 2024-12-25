@@ -1,3 +1,4 @@
+![Twitter-Trending-Topics1](https://github.com/user-attachments/assets/72012fe7-27be-43a4-b134-7d3d3b78229a)
 # Web Scraping Project
 
 This project implements a web scraping application that fetches Twitter's top 5 trending topics using Selenium and ProxyMesh. The scraped data is stored in a MongoDB database and displayed on a web page.
