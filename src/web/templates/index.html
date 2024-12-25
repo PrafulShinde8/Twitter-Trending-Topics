@@ -1,0 +1,283 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Twitter Trending Topics</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Top 5 Trending Topics on Twitter</h1>
+        <button id="scrape-button">Fetch Trending Topics</button>
+        <div id="results"></div>
+    </div>
+    <script>
+        document.getElementById('scrape-button').addEventListener('click', function() {
+            fetch('/scrape')
+                .then(response => response.json())
+                .then(data => {
+                    const resultsDiv = document.getElementById('results');
+                    resultsDiv.innerHTML = '';
+                    data.trends.forEach(trend => {
+                        const trendElement = document.createElement('p');
+                        trendElement.textContent = trend;
+                        resultsDiv.appendChild(trendElement);
+                    });
+                });
+        });
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Trends</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Twitter Trends</h1>
+    <button id="run-scraper">Click here to run the script</button>
+    <div id="results"></div>
+    <script>
+        document.getElementById('run-scraper').addEventListener('click', function() {
+            fetch('/run-scraper', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    const resultsDiv = document.getElementById('results');
+                    resultsDiv.innerHTML = `
+                        <p>These are the most happening topics as on ${data.timestamp}</p>
+                        <ul>
+                            <li>${data.trend1}</li>
+                            <li>${data.trend2}</li>
+                            <li>${data.trend3}</li>
+                            <li>${data.trend4}</li>
+                            <li>${data.trend5}</li>
+                        </ul>
+                        <p>The IP address used for this query was ${data.ip_address}.</p>
+                        <pre>${JSON.stringify(data, null, 2)}</pre>
+                    `;
+                });
+        });
+    </script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Trends</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Twitter Trends</h1>
+    <button id="run-scraper">Click here to run the script</button>
+    <div id="results"></div>
+    <script>
+        document.getElementById('run-scraper').addEventListener('click', function() {
+            fetch('/run-scraper', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    const resultsDiv = document.getElementById('results');
+                    resultsDiv.innerHTML = `
+                        <p>These are the most happening topics as on ${data.timestamp}</p>
+                        <ul>
+                            <li>${data.trend1}</li>
+                            <li>${data.trend2}</li>
+                            <li>${data.trend3}</li>
+                            <li>${data.trend4}</li>
+                            <li>${data.trend5}</li>
+                        </ul>
+                        <p>The IP address used for this query was ${data.ip_address}.</p>
+                        <pre>${JSON.stringify(data, null, 2)}</pre>
+                    `;
+                });
+        });
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Trends</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Twitter Trends</h1>
+    <button id="run-scraper">Click here to run the script</button>
+    <div id="results"></div>
+    <script>
+        document.getElementById('run-scraper').addEventListener('click', function() {
+            fetch('/run-scraper', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    const resultsDiv = document.getElementById('results');
+                    resultsDiv.innerHTML = `
+                        <p>These are the most happening topics as on ${data.timestamp}</p>
+                        <ul>
+                            <li>${data.trend1}</li>
+                            <li>${data.trend2}</li>
+                            <li>${data.trend3}</li>
+                            <li>${data.trend4}</li>
+                            <li>${data.trend5}</li>
+                        </ul>
+                        <p>The IP address used for this query was ${data.ip_address}.</p>
+                        <pre>${JSON.stringify(data, null, 2)}</pre>
+                        <a href="#" id="run-again">Click here to run the query again</a>
+                    `;
+                    document.getElementById('run-again').addEventListener('click', function() {
+                        document.getElementById('run-scraper').click();
+                    });
+                });
+        });
+    </script>
+</body>
+</html> -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Trends</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Twitter Trends</h1>
+    <a href="#" id="run-scraper">Click here to run the script</a>
+    <div id="results"></div>
+    <script>
+        document.getElementById('run-scraper').addEventListener('click', function(event) {
+            event.preventDefault();
+            fetch('/run-scraper', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    const resultsDiv = document.getElementById('results');
+                    resultsDiv.innerHTML = `
+                        <p>These are the most happening topics as on ${data.timestamp}</p>
+                        <ul>
+                            <li>${data.trend1}</li>
+                            <li>${data.trend2}</li>
+                            <li>${data.trend3}</li>
+                            <li>${data.trend4}</li>
+                            <li>${data.trend5}</li>
+                        </ul>
+                        <p>The IP address used for this query was ${data.ip_address}.</p>
+                        <pre>${JSON.stringify(data, null, 2)}</pre>
+                        <a href="#" id="run-again">Click here to run the query again</a>
+                    `;
+                    document.getElementById('run-again').addEventListener('click', function(event) {
+                        event.preventDefault();
+                        document.getElementById('run-scraper').click();
+                    });
+                });
+        });
+    </script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Trends</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Twitter Trends</h1>
+    <a href="#" id="run-scraper">Click here to run the script</a>
+    <div id="results"></div>
+    <script>
+        document.getElementById('run-scraper').addEventListener('click', function(event) {
+            event.preventDefault();
+            const runScraperLink = document.getElementById('run-scraper');
+            runScraperLink.style.pointerEvents = 'none'; // Disable the link
+            runScraperLink.style.color = 'grey'; // Optionally change the color to indicate it's disabled
+
+            fetch('/run-scraper', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    const resultsDiv = document.getElementById('results');
+                    resultsDiv.innerHTML = `
+                        <p>These are the most happening topics as on ${data.timestamp}</p>
+                        <ul>
+                            <li>${data.trend1}</li>
+                            <li>${data.trend2}</li>
+                            <li>${data.trend3}</li>
+                            <li>${data.trend4}</li>
+                            <li>${data.trend5}</li>
+                        </ul>
+                        <p>The IP address used for this query was ${data.ip_address}.</p>
+                        <pre>${JSON.stringify(data, null, 2)}</pre>
+                        <a href="#" id="run-again">Click here to run the query again</a>
+                    `;
+                    document.getElementById('run-again').addEventListener('click', function(event) {
+                        event.preventDefault();
+                        runScraperLink.style.pointerEvents = 'auto'; // Re-enable the link
+                        runScraperLink.style.color = ''; // Reset the color
+                        runScraperLink.click();
+                    });
+                });
+        });
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Trends</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Twitter Trends</h1>
+    <a href="#" id="run-scraper">Click here to run the script.</a>
+    <div id="results"></div>
+    <script>
+        document.getElementById('run-scraper').addEventListener('click', function(event) {
+            event.preventDefault();
+            const runScraperLink = document.getElementById('run-scraper');
+            runScraperLink.classList.add('disabled'); // Disable the link
+
+            fetch('/run-scraper', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    const resultsDiv = document.getElementById('results');
+                    resultsDiv.innerHTML = `
+                        <p>These are the most happening topics as on ${data.timestamp}</p>
+                        <ul>
+                            <li>${data.trend1}</li>
+                            <li>${data.trend2}</li>
+                            <li>${data.trend3}</li>
+                            <li>${data.trend4}</li>
+                            <li>${data.trend5}</li>
+                        </ul>
+                        <p>The IP address used for this query was ${data.ip_address}.</p>
+                        <pre>${JSON.stringify(data, null, 2)}</pre>
+                        <a href="#" id="run-again">Click here to run the query again.</a>
+                    `;
+                    document.getElementById('run-again').addEventListener('click', function(event) {
+                        event.preventDefault();
+                        runScraperLink.classList.remove('disabled'); // Re-enable the link
+                        runScraperLink.click();
+                    });
+                });
+        });
+    </script>
+</body>
+</html>

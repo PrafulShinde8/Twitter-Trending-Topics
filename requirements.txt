@@ -1,0 +1,7 @@
+Flask
+Selenium
+pymongo
+python-dotenv
+requests
+beautifulsoup4
+webdriver-manager
