@@ -1,10 +1,12 @@
-
-![Twitter-Trending-Topics1](https://github.com/user-attachments/assets/72012fe7-27be-43a4-b134-7d3d3b78229a)
 This is what you can see on UI. To fetch the trending topics click on the link i.e. click here to run the script.
-![Twitter-Trending-Topics2](https://github.com/user-attachments/assets/3d1c90ac-3bd6-4cf8-acb5-faf6f38dcd2b)
+![Twitter-Trending-Topics1](https://github.com/user-attachments/assets/72012fe7-27be-43a4-b134-7d3d3b78229a)
+
 After clicking on the link it will login to your Twitter account automatically and you will get top 5 happening topics of twitter successfully with date, time, IP Address used for that query and json extract from MongoDB
-![Twitter-Trending-Topics3](https://github.com/user-attachments/assets/b74b96d1-1a11-4609-aa5d-de55cd25faba)
+![Twitter-Trending-Topics2](https://github.com/user-attachments/assets/3d1c90ac-3bd6-4cf8-acb5-faf6f38dcd2b)
+
 When you click on "Click here to run the query again" it will fetch the latest happening topics again and you can see date and time is also updated 
+![Twitter-Trending-Topics3](https://github.com/user-attachments/assets/b74b96d1-1a11-4609-aa5d-de55cd25faba)
+
 
 # Web Scraping Project
 
