@@ -8,14 +8,14 @@ When you click on "Click here to run the query again" it will fetch the latest h
 ![Twitter-Trending-Topics3](https://github.com/user-attachments/assets/b74b96d1-1a11-4609-aa5d-de55cd25faba)
 
 
-# Web Scraping Project
+# Twitter Trending Topics
 
-This project implements a web scraping application that fetches Twitter's top 5 trending topics using Selenium and ProxyMesh. The scraped data is stored in a MongoDB database and displayed on a web page.
+This project fetches Twitter's top 5 trending topics with live date and time using Selenium and ProxyMesh when we click on click here to run the script by the way you will be automatically logged into twitter first because I have done the coding for it also. The scraped data is stored in a MongoDB database and displayed on a web page. You can see there is json data also extracted from the record of MongoDB.And when you click on click here to run the script again the latest top 5 twitter trending topics are fetched again. I have done everything successfully covered all the points of assignment.
 
 ## Project Structure
 
 ```
-web-scraping-project
+Twitter-Trending-Topics
 ├── src
 │   ├── app.py                # Main entry point of the application
 │   ├── scraper
@@ -41,8 +41,8 @@ web-scraping-project
 
 1. **Clone the repository:**
    ```
-   git clone <repository-url>
-   cd web-scraping-project
+   git clone https://github.com/PrafulShinde8/Twitter-Trending-Topics.git
+   cd Twitter-Trending-Topics
    ```
 
 2. **Create a virtual environment:**
@@ -55,9 +55,23 @@ web-scraping-project
    ```
    pip install -r requirements.txt
    ```
-
+4. requirements.txt
+   ```
+   Flask
+   Selenium
+   pymongo
+   python-dotenv
+   requests
+   beautifulsoup4
+   webdriver-manager
+   ```
 4. **Set up environment variables:**
    Create a `.env` file in the root directory and add your API keys and database connection strings.
+   ```
+   MONGO_URI=mongodb://localhost:27017/
+   PROXYMESH_URL=http://username:password@us-ca.proxymesh.com:31280
+   TWITTER_USERNAME=Your twitter username
+   TWITTER_PASSWORD=Your twitter password
 
 5. **Run the application:**
    ```
@@ -67,7 +81,7 @@ web-scraping-project
 ## Usage
 
 - Open your web browser and navigate to `http://localhost:5000`.
-- Click the button to run the scraping script and view the top 5 trending topics from Twitter.
+- Click the link named Click here to run the script and view the top 5 trending topics from Twitter.
 
 ## Notes
 
